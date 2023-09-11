@@ -1,0 +1,67 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+     <div class="row">
+		<div class="col-lg-6">
+			<div class="box-element" id="form-wrapper">
+				<form id="form">
+					<div id="user-info">
+						<div class="form-field">
+							<input required class="form-control" type="text" name="name" placeholder="အမည်..">
+						</div>
+						<div class="form-field">
+							<input required class="form-control" type="email" name="email" placeholder="အီးမေးလ်..">
+						</div>
+					</div>
+					
+					<div id="shipping-info">
+						<hr>
+						<p>ဈေးဝယ်သူ၏ အချက်အလက်ဖြည့်ရန်__</p>
+						<hr>
+						<div class="form-field">
+							<input class="form-control" type="text" name="address" placeholder="နေရပ်လိပ်စာ..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="city" placeholder="မြို့..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="state" placeholder="ပြည်နယ်..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="zipcode" placeholder="ဈေးဝယ်သူ၏ အိုင်ဒီ..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" name="country" placeholder="ပစ္စည်းကုဒ်..">
+						</div>
+					</div>
+
+					<hr>
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+				</form>
+			</div>
+
+			<br>
+			<div class="box-element hidden" id="payment-info">
+				<small>Paypal Options</small>
+			</div>
+			
+		</div>
+
+		<div class="col-lg-6">
+			<div class="box-element">
+				<a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+				<hr>
+				<h3>စုစုပေါင်းမှာယူထားသောစာရင်း</h3>
+				<hr>
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'images/placeholder2.jpg' %}"></div>
+					<div style="flex:2"><p>စာအုပ်</p></div>
+					<div style="flex:1"><p>$20.00</p></div>
+					<div style="flex:1"><p>x2 အုပ်</p></div>
+				</div>
+				<h5>အရေအတွက်:   2</h5>
+				<h5>စုစုပေါင်း:   $4</h5>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
